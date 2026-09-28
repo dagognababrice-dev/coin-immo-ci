@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coin Immo CI — trouvez votre bien immobilier en Côte d'Ivoire. Vente, location, terrains, maisons et appartements.">
+  <title>Coin Immo CI — Immobilier en Côte d'Ivoire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#"><span>CI</span> Coin Immo</a>
+    <button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+    <nav class="nav-links">
+      <a href="#annonces">Annonces</a>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-dark" href="#publier">Publier une annonce</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">L'immobilier autrement en Côte d'Ivoire</p>
+      <h1>Trouvez le bien qui vous ressemble.</h1>
+      <p class="hero-text">Maisons, appartements, terrains, bureaux et commerces à vendre ou à louer à Abidjan et partout en Côte d'Ivoire.</p>
+    </div>
+
+    <div class="search-card">
+      <div class="tabs">
+        <button class="tab active" data-type="Vente">Acheter</button>
+        <button class="tab" data-type="Location">Louer</button>
+      </div>
+      <form id="searchForm" class="search-form">
+        <label>Que recherchez-vous ?
+          <select id="propertyType">
+            <option value="Tous">Tous les biens</option>
+            <option>Maison</option>
+            <option>Appartement</option>
+            <option>Terrain</option>
+            <option>Bureau</option>
+            <option>Commerce</option>
+          </select>
+        </label>
+        <label>Localisation
+          <input id="location" type="text" placeholder="Ex. Cocody, Abidjan">
+        </label>
+        <label>Budget maximum
+          <input id="budget" type="number" placeholder="Ex. 150000000">
+        </label>
+        <button class="btn btn-primary" type="submit">Rechercher</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="annonces" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Nos opportunités</p>
+        <h2>Biens à la une</h2>
+      </div>
+      <button class="link-btn" id="resetFilters">Voir toutes les annonces →</button>
+    </div>
+    <div id="resultsInfo" class="results-info"></div>
+    <div class="property-grid" id="propertyGrid"></div>
+  </div>
+</section>
+
+<section id="services" class="section soft">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Pourquoi Coin Immo CI ?</p>
+        <h2>Un accompagnement simple et local</h2>
+      </div>
+    </div>
+    <div class="services-grid">
+      <article><div class="icon">⌂</div><h3>Des annonces ciblées</h3><p>Découvrez des biens résidentiels et professionnels dans les quartiers qui vous intéressent.</p></article>
+      <article><div class="icon">✓</div><h3>Un parcours transparent</h3><p>Présentez clairement votre budget, vos critères et votre projet immobilier.</p></article>
+      <article><div class="icon">↗</div><h3>Publiez votre bien</h3><p>Propriétaires et professionnels peuvent présenter leurs biens à de futurs acquéreurs ou locataires.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" class="about">
+  <div class="container about-grid">
+    <div class="about-image"><div class="image-overlay"><span>COIN IMMO CI</span><strong>Votre projet.<br>Notre terrain.</strong></div></div>
+    <div class="about-copy">
+      <p class="eyebrow">À propos</p>
+      <h2>L'immobilier ivoirien, au bout des doigts.</h2>
+      <p>Coin Immo CI est une plateforme dédiée à la recherche et à la publication d'annonces immobilières en Côte d'Ivoire.</p>
+      <p>Notre objectif : rendre la recherche d'un logement, d'un terrain ou d'un local plus claire, plus rapide et plus accessible.</p>
+      <a class="btn btn-dark" href="#contact">Parler de mon projet</a>
+    </div>
+  </div>
+</section>
+
+<section id="publier" class="cta">
+  <div class="container cta-inner">
+    <div><p class="eyebrow">Vous êtes propriétaire ?</p><h2>Donnez de la visibilité à votre bien.</h2></div>
+    <a class="btn btn-light" href="#contact">Publier mon annonce</a>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de votre projet.</h2>
+      <p>Une question, un bien à publier ou une recherche particulière ? Écrivez-nous.</p>
+      <div class="contact-details">
+        <p><strong>Email</strong><br>contact@coin-immo-ci.com</p>
+        <p><strong>Téléphone</strong><br>+225 07 00 00 00 00</p>
+        <p><strong>Zone</strong><br>Abidjan · Côte d'Ivoire</p>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <input required type="text" placeholder="Votre nom">
+      <input required type="email" placeholder="Votre email">
+      <input type="tel" placeholder="Votre téléphone">
+      <textarea required rows="5" placeholder="Décrivez votre projet..."></textarea>
+      <button class="btn btn-primary" type="submit">Envoyer le message</button>
+      <p id="contactMessage" class="form-message"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="logo light-logo" href="#"><span>CI</span> Coin Immo</a>
+    <p>© <span id="year"></span> Coin Immo CI. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
